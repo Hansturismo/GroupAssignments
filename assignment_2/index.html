@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./css/reset.css" rel="stylesheet" />
         <link href="./css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
         <script src="./js/app.js" defer></script>
@@ -11,36 +12,39 @@
     <body>
         <main>
             <section class="slideshow" aria-label="slidehow">
-                <figure class="slideFigure">
-                    
-                    <div class="imageContainer"> 
-                        <img id="slideImage" src="" alt="">
-
+                <figure class="slidefigure">
+                    <img
+                        src="assets/images/durian-fruit.webp"
+                        alt="Image of lychee fruit"
+                        title="https://www.britannica.com/plant/litchi-fruit"
+                    />
+                    <div class="figcaption-container">
+                        <figcaption class="image-caption">Fig 1. Lychee fruit</figcaption>
+                        <figcaption class="image-source">
+                            <a href="https://www.britannica.com/plant/litchi-fruit"
+                                >Source: https://www.britannica.com/plant/litchi-fruit</a
+                            >
+                        </figcaption>
                     </div>
-                    <figcaption class="imageCaption">
-                        <p class="slideCaption"></p>
-                        <span class="imageCounter">
-                            <span id="slideNumber">01</span>
-                            <span class="counterSeperator">/</span>
-                            <span id="slideTotal">08</span>
-                        </span>
-                        
-                    </figcaption>
-                    <div class="controlPanel">
-                        <div class="progressZone">
-                            <div class="progressTrack">
-                                <div id="progressFill" class="progressFill"></div>
-                            </div>
+                </figure>
+                <span class="image-counter">
+                    <span id="slideNumber">01</span>
+                    <span class="counterSeperator">/</span>
+                    <span id="slideTotal">08</span>
+                </span>
+                <div class="control-panel">
+                    <!-- <div class="progressZone">
+                        <div class="progressTrack">
+                            <div id="progressFill" class="progressFill"></div>
                         </div>
-
-                        <div class="arrowButtons">
-                            <button class="previousButton" type="button"></button>
-                            <button class="nextButton" type="button"></button>
-                        </div>
+                    </div> -->
+                    <div class="arrow-buttons">
+                        <button class="previous-button" type="button">Previous</button>
+                        <button class="next-button" type="button">Next</button>
                     </div>
-                
-                    
-                    <div class="sources">
+                </div>
+
+                <!-- <div class="sources">
                         <p>https://en.wikipedia.org/wiki/Dragon_fruit</p>
                         <p>https://www.jurassicfruit.com/en/products/passionfruit-red?variant=44885794783289</p>
                         <p>https://tropicalfruitparadise.com/ro-ro/products/papaya-bio</p>
@@ -51,8 +55,7 @@
                             https://quillandpad.com/2023/02/13/durian-the-king-of-fruits-absolutely-delicious-but-the-smell-is-unforgettable-and-thats-putting-it-mildly/
                         </p>
                         <p>https://www.amazon.in/Taiwan-Guava-Healthy-Grafted-Growing/dp/B0H4H1XL3X</p>
-                    </div>
-                </figure>
+                    </div> -->
             </section>
         </main>
     </body>
