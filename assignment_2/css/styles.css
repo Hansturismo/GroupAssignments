@@ -1,7 +1,11 @@
-/* Body */
+/* Body. */
 body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     align-items: center;
@@ -10,98 +14,240 @@ body {
     font-family: var(--fontFamily);
 }
 
-/* Main Content */
+/* Main Content. */
 main {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 70%;
-    background-color: var(--panel);
-}
-
-/* Slideshow */
-.slideshow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    max-width: 1490px;
 }
 
-/* Image and Figure */
+/* Slideshow. */
+.slideshow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+}
+
+/* Image and Figure. */
 .slideFigure {
-    display: inline-flex;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    min-width: 0;
     margin: 0;
 }
 
-.slideFigure img {
-    flex: 1;
-    min-height: 0;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+/* Image Stage. */
+.imageStage {
+    width: 100%;
+    height: clamp(360px, 43vw, 690px);
+    background-color: var(--background);
+    overflow: hidden;
 }
 
-/* Image Caption and Source */
-.imageSource,
-.imageCaption {
-    color: var(--text);
-    flex-shrink: 0;
-    margin-top: 0.25rem;
-    font-size: large;
+/* Slideshow Image */
+.slideFigure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 a {
     color: var(--accent);
 }
 
+/* Image Caption and Source. */
 .figcaptionContainer {
-    width: 100%;
+    min-height: 5.5rem;
+    padding: 1rem clamp(8rem, 14vw, 12rem) 1rem clamp(1.2rem, 3vw, 3rem);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    background-color: var(--captionBackground);
+    border-bottom: 1px solid var(--border);
 }
 
-/* Image Counter */
-.imageCounter {
-    align-self: center;
-    font-size: large;
-    background-color: var(--background);
+/* Image Caption and Source. */
+.imageSource,
+.imageCaption {
+    margin: 0;
+    font-size: clamp(0.94rem, 1.35vw, 1.15rem);
+    line-height: 1.4;
+}
+
+.imageCaption {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.imageSource {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.imageSource a {
+    color: var(--muted);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+}
+
+-imageSource a:hover {
     color: var(--accent);
-    width: 5%;
-    text-align: center;
-    border: 1px solid var(--border);
-    border-radius: 5px;
 }
 
-/* Slideshow Controls */
+/* Image Counter. */
+.imageCounter {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    align-self: end;
+    z-index: 1;
+    margin-right: clamp(1.2rem, 3vw, 2rem);
+    margin-bottom: 2rem;
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+}
+
+.counterSeperator {
+    padding: 0 0.45rem;
+    color: var(--text);
+}
+
+/* Slideshow Controls. */
 .controlPanel {
-    align-self: center;
-    padding: 1rem;
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 110px;
+    padding: 1.4rem clamp(1.2rem, 3vw, 3rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
 }
 
-/* Image Sources */
-.sources {
-    visibility: hidden;
+/* Progress Bar */
+.progressZone {
+    grid-column: 2;
+    width: clamp(12rem, 30vW, 28rem);
 }
 
-/* Navigation Buttons */
+.progressTrack {
+    width: 100%;
+    height: 5px;
+    background-color: var(--border);
+}
+
+.progressFill {
+    width: 0;
+    height: 100%;
+    background-color: var(--accent);
+    transition: width 0.2s;
+}
+
+/* Navigation Buttons. */
+.arrowButtons {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    gap: 0.7rem;
+}
+
 .previousButton,
 .nextButton {
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: 100;
+    min-width: 6rem;
+    height: 3.5rem;
+    padding: 0 1rem;
     background-color: var(--accent);
     color: var(--accentText);
+    border: 2px solid var(--accent);
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--fontFamily);
+    cursor: pointer;
+}
+
+.previousButton:hover,
+.nextButton:hover {
+    background-color: var(--buttonHover);
+    color: var(--text);
 }
 
 .previousButton:active,
 .nextButton:active {
     transform: scale(0.95);
-    background-color: var(--panel);
-    color: var(--accent);
+}
+
+/* Image Sources. */
+.sources {
+    visibility: hidden;
+}
+
+/* Tablet Layout */
+@media (max-width: 740px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    .imageStage {
+        height: 490px;
+    }
+    .figcaptionContainer {
+        padding-right: 8rem;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 490px) {
+    body {
+        padding: 1rem 0.75rem;
+    }
+    .imageStage {
+        height: 390px;
+    }
+    .figcaptionContainer {
+        min-height: 5.5rem;
+        padding: 0.9rem 7rem 0.9rem 1.1rem;
+    }    
+    .imageCaption {
+        font-size: 0.94rem;
+    }
+    .imageSource {
+        font-size: 0.75rem;
+    }
+    .imageCounter {
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+        font-size: 0.875rem;
+    }
+    .controlPanel {
+        min-height: 90px;
+        padding: 1.2rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .progressZone {
+        grid-column: 1;
+        width: min(100%, 28rem);
+        justify-self: center;
+    }
+    .arrowButtons {
+        grid-column: 1;
+        justify-self: center;
+        gap: 0.7rem;
+    }
+    .previousButton,
+    .nextButton {
+        min-width: 5.5rem,
+        height: 2.75rem,
+        font-size: 0.875rem;
+    }
 }
