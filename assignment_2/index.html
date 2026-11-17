@@ -1,49 +1,77 @@
+<!-- Declare the document type as HTML5. -->
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Specify the character encoding. -->
         <meta charset="UTF-8" />
+        <!-- Adjust the page size for different screens. -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Load the CSS reset and main stylesheet. -->
         <link href="./css/reset.css" rel="stylesheet" />
         <link href="./css/styles.css" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+        <!-- Set the favicon displayed in the browser tab. -->
+        <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
+        <!-- Load JavaScript after the HTML document has been parsed. -->
         <script src="./js/app.js" defer></script>
-        <title>Document</title>
+        <!-- Set the title displayed in the browser tab. -->
+        <title>Photo Slideshow</title>
     </head>
     <body>
+        <!-- Define the main content of the page. -->
         <main>
-            <section class="slideshow" aria-label="slidehow">
+            <!-- Create a section for the slideshow. -->
+            <section class="slideshow" aria-label="Photo slideshow">
+                <!-- Group the image with its caption and source. -->
                 <figure class="slidefigure">
-                    <img
-                        src="assets/images/durian-fruit.webp"
-                        alt="Image of lychee fruit"
-                        title="https://www.britannica.com/plant/litchi-fruit"
-                    />
-                    <div class="figcaption-container">
-                        <figcaption class="image-caption">Fig 1. Lychee fruit</figcaption>
-                        <figcaption class="image-source">
-                            <a href="https://www.britannica.com/plant/litchi-fruit"
-                                >Source: https://www.britannica.com/plant/litchi-fruit</a
-                            >
-                        </figcaption>
+                    <!-- Create a container for the image. -->
+                    <div>
+                        <!-- Display the slideshow image. -->
+                        <img
+                            src="assets/images/durian-fruit.webp"
+                            alt="Durian fruit"
+                            title="Durian fruit"
+                        />
                     </div>
+                    <!-- Group the image description and reference link. -->
+                    <figcaption class="figcaption-container">
+                        <!-- Display the image description. -->
+                        <p class="image-caption">
+                            Fig 1. Durian fruit
+                        </p>
+                        <!-- Display a reference link about the fruit. -->
+                        <p class="image-source">
+                            <a href="https://quillandpad.com/2023/02/13/durian-the-king-of-fruits-absolutely-delicious-but-the-smell-is-unforgettable-and-thats-putting-it-mildly/">
+                                Read about durian fruit
+                            </a>
+                        </p>
+                    </figcaption>
                 </figure>
+                <!-- Display the current image number and total number of images. -->
                 <span class="image-counter">
+                    <!-- Display the current image number. -->
                     <span id="slideNumber">01</span>
-                    <span class="counterSeperator">/</span>
+                    <!-- Separate the current image number from the total. -->
+                    <span class="counterSeparator">/</span>
+                    <!-- Display the total number of images. -->
                     <span id="slideTotal">08</span>
                 </span>
+                <!-- Create a panel for the slideshow controls. -->
                 <div class="control-panel">
+                    <!-- Keep the progress bar disabled for now. -->
                     <!-- <div class="progressZone">
                         <div class="progressTrack">
                             <div id="progressFill" class="progressFill"></div>
                         </div>
                     </div> -->
+                    <!-- Group the slideshow navigation buttons. -->
                     <div class="arrow-buttons">
+                        <!-- Go to the previous image. -->
                         <button class="previous-button" type="button">Previous</button>
+                        <!-- Go to the next image. -->
                         <button class="next-button" type="button">Next</button>
                     </div>
                 </div>
-
+                <!-- Keep the list of image references disabled for now. -->
                 <!-- <div class="sources">
                         <p>https://en.wikipedia.org/wiki/Dragon_fruit</p>
                         <p>https://www.jurassicfruit.com/en/products/passionfruit-red?variant=44885794783289</p>
