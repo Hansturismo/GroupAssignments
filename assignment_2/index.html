@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!-- Load the CSS reset and main stylesheet. -->
         <link href="./css/reset.css" rel="stylesheet"/>
-        <link href="./css/styles.css" rel="stylesheet"/>
         <link href="./css/variables.css" rel="stylesheet"/>
+        <link href="./css/styles.css" rel="stylesheet"/>
         <!-- Set the favicon displayed in the browser tab. -->
         <link rel="icon" type="image/x-icon" href="./icons/favicon.ico"/>
         <!-- Connect to Google Fonts and load the Outfit font family. -->
@@ -29,16 +29,17 @@
                 <!-- Group the image with its caption and source. -->
                 <figure class="slideFigure">
                     <!-- Create a container for the image. -->
-                    <div>
+                    <div class="imageStage">
                         <!-- Display the slideshow image. -->
                         <img
+                            id="slideImage"
                             src="assets/images/durianFruit.webp"
                             alt="Durian fruit"
                             title="Durian fruit"
                         />
                     </div>
                     <!-- Group the image description and reference link. -->
-                    <figcaption class="figcaptionFontainer">
+                    <figcaption class="figcaptionContainer">
                         <!-- Display the image description. -->
                         <p class="imageCaption">
                             Fig 1. Durian fruit
