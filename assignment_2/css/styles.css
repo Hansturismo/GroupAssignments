@@ -67,6 +67,7 @@ a {
     gap: 0.4rem;
     background-color: var(--captionBackground);
     border-bottom: 1px solid var(--border);
+    overflow-y: auto;
 }
 
 /* Image Caption and Source Text. */
@@ -192,14 +193,29 @@ a {
 
 /* Tablet Layout */
 @media (max-width: 740px) {
-    body {
-        padding: 1.5rem 1rem;
+    .controlPanel {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
     }
-    .imageStage {
-        height: 490px;
+
+    .progressZone {
+        grid-column: 1;
+        grid-row: 1;
+        width: min(100%, 28rem);
+        justify-self: center;
     }
-    .figcaptionContainer {
-        padding-right: 8rem;
+
+    .arrowButtons {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: center;
+        width: min(100%, 20rem);
+    }
+
+    .previousButton,
+    .nextButton {
+        flex: 1;
+        min-width: 0;
     }
 }
 
@@ -212,7 +228,7 @@ a {
         height: 390px;
     }
     .figcaptionContainer {
-        min-height: 5.5rem;
+        height: 11rem;
         padding: 0.9rem 7rem 0.9rem 1.1rem;
     }    
     .imageCaption {
@@ -247,5 +263,52 @@ a {
         min-width: 5.5rem;
         height: 2.75rem;
         font-size: 0.875rem;
+    }
+}
+
+/* Extra Small Mobile Layout. */
+@media (max-width: 270px) {
+    body {
+        padding: 0.5rem;
+    }
+    .imageStage {
+        height: 220px;
+    }
+    .figcaptionContainer {
+        height: 12rem;
+        padding: 0.75rem;
+        justify-content: flex-start;
+    }
+    .imageCaption {
+        font-size: 0.8rem;
+    }
+    .imageSource {
+        font-size: 0.7rem;
+    }
+    .imageCounter {
+        margin-right: 0.75rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+    }
+    .controlPanel {
+        padding: 0.75rem;
+        gap: 1rem;
+    }
+    .progressZone {
+        width: 100%;
+    }
+    .arrowButtons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .previousButton,
+    .nextButton {
+        flex: 1;
+        min-width: 0;
+        height: 2.5rem;
+        padding: 0.25rem;
+        font-size: 0.75rem;
     }
 }
