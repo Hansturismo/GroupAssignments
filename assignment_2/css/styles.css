@@ -6,6 +6,7 @@ body {
     width: 100vw;
     align-items: center;
     background-color: rgb(75, 119, 119);
+    font-family: var(--fontFamily);
 }
 
 /* Main Content */

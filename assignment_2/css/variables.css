@@ -1,0 +1,12 @@
+/* High-contrast midnight, white and electric lime palette */
+:root {
+    --background: #080a14;
+    --panel: #121729;
+    --text: #f9fbff;
+    --muted: #d2dbeb;
+    --accent: #d7ff55;
+    --accentText: #142005;
+    --border: #4c5c76;
+    --focus: #d7ff55;
+    --fontFamily: "Outfit", "Segoe UI", "Helvetica Neue", Arial, Verdana, sans-serif;
+}
