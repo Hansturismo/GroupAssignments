@@ -6,9 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
     background-color: var(--background);
     color: var(--text);
     font-family: var(--fontFamily);
@@ -60,7 +57,7 @@ a {
     color: var(--accent);
 }
 
-/* Image Caption and Source. */
+/* Image Caption and Source Container. */
 .figcaptionContainer {
     min-height: 5.5rem;
     padding: 1rem clamp(8rem, 14vw, 12rem) 1rem clamp(1.2rem, 3vw, 3rem);
@@ -72,7 +69,7 @@ a {
     border-bottom: 1px solid var(--border);
 }
 
-/* Image Caption and Source. */
+/* Image Caption and Source Text. */
 .imageSource,
 .imageCaption {
     margin: 0;
@@ -96,7 +93,7 @@ a {
     overflow-wrap: anywhere;
 }
 
--imageSource a:hover {
+.imageSource a:hover {
     color: var(--accent);
 }
 
@@ -117,7 +114,8 @@ a {
     white-space: nowrap;
 }
 
-.counterSeperator {
+/* Counter Separator */
+.counterSeparator {
     padding: 0 0.45rem;
     color: var(--text);
 }
@@ -137,7 +135,7 @@ a {
 /* Progress Bar */
 .progressZone {
     grid-column: 2;
-    width: clamp(12rem, 30vW, 28rem);
+    width: clamp(12rem, 30vw, 28rem);
 }
 
 .progressTrack {
@@ -246,8 +244,8 @@ a {
     }
     .previousButton,
     .nextButton {
-        min-width: 5.5rem,
-        height: 2.75rem,
+        min-width: 5.5rem;
+        height: 2.75rem;
         font-size: 0.875rem;
     }
 }
