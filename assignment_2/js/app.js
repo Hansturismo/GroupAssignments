@@ -1,16 +1,31 @@
-
-let currentIndex = 0; // Store the index of the currently displayed image, starting at zero.
+// Store the index of the currently displayed image, starting at zero.
+let currentIndex = 0;
 
 // Select the HTML elements needed for image navigation.
 const slideImage = document.querySelector("#slideImage"); // Select the image element.
 const previousButton = document.querySelector(".previousButton"); // Select the previous image button.
 const nextButton = document.querySelector(".nextButton"); // Select the next image button.
+const slideNumber = document.querySelector("#slideNumber"); // Select the current image number.
+const slideTotal = document.querySelector("#slideTotal"); // Select the total image count.
 
-// Display the current image.
+ // Display the current image and update the image counter.
 function displaySlide() {
     const currentSlide = imageArray[currentIndex]; // Retrieve the current image object from images.js.
     slideImage.src = currentSlide.file; // Update the displayed image.
     slideImage.alt = currentSlide.alt; // Update the image's alternative text.
+    const currentSlideNumber = currentIndex + 1; // Convert the zero-based index to an image number readable for humans.
+    // Add a leading zero to the current image number if it is less than 10.
+    if (currentSlideNumber < 10) { // Check if the current image number is less than 10.
+        slideNumber.textContent = "0" + currentSlideNumber; // Add a zero before the image number.
+    } else { // Handle image numbers of 10 or greater.
+        slideNumber.textContent = currentSlideNumber; // Display the image number without a leading zero.
+    }
+    // Add a leading zero to the total image count if it is less than 10.
+    if (imageArray.length < 10) { // Check if the total image count is less than 10.
+        slideTotal.textContent = "0" + imageArray.length; // Add a zero before the total image count.
+    } else { // Handle image counts of 10 or greater.
+        slideTotal.textContent = imageArray.length; // Display the total image count without a leading zero.
+    }
 }
 
 // Change the current image based on the navigation direction.
