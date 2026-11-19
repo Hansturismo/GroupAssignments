@@ -3,37 +3,29 @@ const nextImageButton = document.querySelector(".nextButton");
 const currentImageCount = document.querySelector("#slideNumber");
 const image = document.querySelector("#slideImage");
 
-console.log(typeof currentImageCount.textContent);
+let currentIndex = 4;
 
-function counterButtons() {
-    nextImageButton.addEventListener("click", nextImage);
-
-    function imageLoop() {}
-    for (i = 0; i < imageArray.length; i++) {
-        if (currentImageCount == 1) {
-            image.setAttribute(`src="${imageArray[i].file}"`);
+function indexHandler(array) {
+    previousImageButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--
+            console.log(currentIndex);
+        } else if (currentIndex <= 0) {
+            currentIndex = array.length - 1;
+            console.log(currentIndex);
         }
-    }
+        
+    });
+    nextImageButton.addEventListener("click", () => {
+        if (currentIndex < (array.length - 1)) {
+            currentIndex++
+            console.log(currentIndex);
+            
+        } else if (currentIndex >= (array.length - 1)) {
+            currentIndex = 0
+            console.log(currentIndex)
+        }
+    })
 }
 
-currentImageCount.textContent = `${"0" + 4}`;
-
-previousImageButton.addEventListener("click", () => {
-    if (currentImageCount.textContent > 1) {
-        const updatedCount = (currentImageCount.textContent - 1);
-        console.log(updatedCount.);
-    }
-});
-
-nextImageButton.addEventListener("click", () => {
-    console.log(nextImageButton);
-    if (currentImageCount.textContent < imageArray.length) {
-        if (currentImageCount < 10) {
-            currentImageCount.textContent = `${"0" + currentImageCount.textContent++}`;
-        } else {
-            currentImageCount.textContent++
-        }
-    }
-    console.log(currentImageCount.textContent);
-});
-
+indexHandler(imageArray);
