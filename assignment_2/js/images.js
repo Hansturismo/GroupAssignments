@@ -8,7 +8,7 @@ const imageArray = [
         file: "assets/images/durianFruit.webp",
     },
     {
-        name: "Passion",
+        name: "Passion fruit",
         alt: "A hand holding a whole purple passion fruit and two halves filled with orange pulp and seeds",
         caption: "Fig 2. Passion fruits have a seedy and pulpy flesh, but a creamy texture and a somewhat sour taste",
         source: "https://www.jurassicfruit.com/en/products/passionfruit-red?variant=44885794783289",
@@ -22,21 +22,21 @@ const imageArray = [
         file: "assets/images/rambutanFruit.webp",
     },
     {
-        name: "Dragon",
+        name: "Dragon fruit",
         alt: "Two red dragon fruits with green scales, one cut in half to reveal white flesh with black seeds",
         caption: "Fig 4. Dragon fruit has a texture similar to kiwi, but with a milder and less sour taste. Its flesh contains numerous tiny edible seeds",
         source: "https://en.wikipedia.org/wiki/Dragon_fruit",
         file: "assets/images/dragonFruit.webp",
     },
     {
-        name: "Carambola",
+        name: "Carambola/Star fruit",
         alt: "Yellow carambola fruits, including a sliced piece showing the distinctive star shape",
         caption: "Fig 5. Carambola, also known as star fruit, has a crisp and juicy texture with a sweet and slightly sour taste. Its slices have a distinctive star shape",
         source: "https://www.motivenow.in/product/star-fruit-6WgtVX",
         file: "assets/images/carambolaFruit.webp",
     },
     {
-        name: "Guava",
+        name: "Guava fruit",
         alt: "Green guava fruits growing on a tree, with two cut open to reveal pink flesh and small seeds",
         caption: "Fig 6. Guava fruits have green skin and a fragrant flesh that can be pink or white. They have a sweet tropical flavor and contain numerous small seeds",
         source: "https://www.amazon.in/Taiwan-Guava-Healthy-Grafted-Growing/dp/B0H4H1XL3X",
