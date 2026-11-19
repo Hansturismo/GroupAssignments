@@ -43,7 +43,7 @@ main {
 
 /* Image Stage. */
 .imageStage {
-    flex: 1;
+    flex: 0 1 700px;
     width: 100%;
     min-height: 0;
     background-color: var(--background);
@@ -232,7 +232,7 @@ a {
     .figcaptionContainer {
         height: 11rem;
         padding: 0.9rem 7rem 0.9rem 1.1rem;
-    }    
+    }
     .imageCaption {
         font-size: 0.94rem;
     }
