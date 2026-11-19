@@ -7,12 +7,24 @@ const previousButton = document.querySelector(".previousButton"); // Select the 
 const nextButton = document.querySelector(".nextButton"); // Select the next image button.
 const slideNumber = document.querySelector("#slideNumber"); // Select the current image number.
 const slideTotal = document.querySelector("#slideTotal"); // Select the total image count.
+const imageCaption = document.querySelector (".imageCaption");
+const imageTitle = document.querySelector (".imageTitle");
+const imageSource = document.querySelector (".imageSource a");
 
  // Display the current image and update the image counter.
 function displaySlide() {
     const currentSlide = imageArray[currentIndex]; // Retrieve the current image object from images.js.
     slideImage.src = currentSlide.file; // Update the displayed image.
     slideImage.alt = currentSlide.alt; // Update the image's alternative text.
+    imageTitle.textContent =currentSlide.name;
+    imageCaption.textContent = currentSlide.caption.split(".").slice(1).join(". ");
+
+
+
+
+    
+    imageSource.href = currentSlide.source;
+    imageSource.textContent = "Image source";
     const currentSlideNumber = currentIndex + 1; // Convert the zero-based index to an image number readable for humans.
     // Add a leading zero to the current image number if it is less than 10.
     if (currentSlideNumber < 10) { // Check if the current image number is less than 10.
