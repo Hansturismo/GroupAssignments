@@ -64,9 +64,10 @@ a {
 
 /* Image Caption and Source Container. */
 .figcaptionContainer {
-    min-height: 5.5rem;
+    min-height: 5rem;
     padding: 1rem clamp(8rem, 14vw, 12rem) 1rem clamp(1.2rem, 3vw, 3rem);
     display: flex;
+    flex: 1 1 5.5rem;
     flex-direction: column;
     justify-content: center;
     gap: 0.4rem;
@@ -191,16 +192,15 @@ a {
     transform: scale(0.95);
 }
 
-/* Image Sources. */
-.sources {
-    visibility: hidden;
-}
-
 /* Tablet Layout */
 @media (max-width: 740px) {
     .controlPanel {
         grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
+    }
+
+    .imageStage {
+        flex: 0 1 700px;
     }
 
     .progressZone {
@@ -228,6 +228,9 @@ a {
 @media (max-width: 490px) {
     body {
         padding: 1rem 0.75rem;
+    }
+    .imageStage {
+        flex: 0 1 450px;
     }
     .figcaptionContainer {
         height: 11rem;
