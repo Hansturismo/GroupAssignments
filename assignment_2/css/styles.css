@@ -242,7 +242,7 @@ a {
         height: 2.75rem;
         font-size: 0.875rem;
     }
-}
+
 
 /* Extra Small Mobile Layout. */
 @media (max-width: 270px) {
@@ -286,4 +286,5 @@ a {
         padding: 0.25rem;
         font-size: 0.75rem;
     }
+}
 }
