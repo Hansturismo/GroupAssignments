@@ -21,7 +21,7 @@ currentImageCount.textContent = `${"0" + 4}`;
 previousImageButton.addEventListener("click", () => {
     if (currentImageCount.textContent > 1) {
         const updatedCount = (currentImageCount.textContent - 1);
-        console.log(updatedCount.);
+        console.log(updatedCount);
     }
 });
 
